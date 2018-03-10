@@ -1,0 +1,26 @@
+{
+  "name": "awesome-pug-jest",
+  "version": "1.0.0",
+  "description": "A Jest transform that compiles .pug files as template functions and includes pug utils",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iketari/awesome-pug-jest.git"
+  },
+  "author": "Artsiom Mezin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iketari/awesome-pug-jest/issues"
+  },
+  "homepage": "https://github.com/iketari/awesome-pug-jest#readme",
+  "dependencies": {
+    "resolve": "^1.5.0"
+  },
+  "peerDependencies": {
+    "pug": "^2.0.1",
+    "pug-runtime": "^2.0.4"
+  }
+}
