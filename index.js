@@ -5,17 +5,22 @@ function transformPugToHtml(src, filePath, baseDir) {
 	const runtimePath = nodeResolve('pug-runtime');
 	const runtime = "var pug = require(" + JSON.stringify(runtimePath) + ");\n";
 
-	return `${runtime}\n${pug.compile(src, {
+	let options = {
 		compileDebug: false,
 		pretty: true,
 		filename: filePath,
-		basedir: baseDir,
-	})}; module.exports = template;`;
+	}
+
+	if (baseDir) {
+		options.baseDir = baseDir
+	}
+
+	return `${runtime}\n${pug.compile(src, options)}; module.exports = template;`;
 }
 
 module.exports = {
 	process(src, filePath, options) {
-    const baseDir = options.roots[0];
+    	const baseDir = options.roots ? options.roots[0] : false;
 		return transformPugToHtml(src, filePath, baseDir);
 	}
 };
