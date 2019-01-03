@@ -20,7 +20,7 @@ function transformPugToHtml(src, filePath, baseDir) {
 
 module.exports = {
 	process(src, filePath, options) {
-    	const baseDir = options.roots ? options.roots[0] : false;
+		const baseDir = options.roots ? options.roots[0] : false;
 		return transformPugToHtml(src, filePath, baseDir);
 	}
 };

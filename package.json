@@ -1,6 +1,6 @@
 {
   "name": "awesome-pug-jest",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Jest transform that compiles .pug files as template functions and includes pug utils",
   "main": "index.js",
   "scripts": {
